@@ -3,7 +3,9 @@
 # print (x)
 # y = 5
 # print (y+x)
+
 name = "Teerapong"
 last_name = "Pinkaew"
 height = 1.68
 weight = 74.5
+print ("I love Kning")
