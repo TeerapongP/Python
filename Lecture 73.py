@@ -8,13 +8,15 @@ def ShowBill():#เเสดงบิลเเละทำการคำนว�
     Result_Total = 0
     vat = 7/100
     Result_Vat = 0
-
+    
+    print("\n")
     print("---- My FOOD ----")
     for i in range(len(Menu_List)):
-        print("รายการอาหารที่สั่ง :",Menu_List[i][0],Menu_List[i][1],"Bath") 
+        print("Ordered food items :",Menu_List[i][0],Menu_List[i][1],"Bath")    
         Result_Total += Menu_List[i][1]
         Result_Vat = Result_Total+(Result_Total*vat)
 
+    print("\n")
     print("VAT 7%")
     print("ราคาก่อนรวม Vat :",Result_Total,"Bath")
     print("ราคาหลังรวม Vat :",math.ceil(Result_Vat),"Bath")
