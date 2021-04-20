@@ -7,6 +7,7 @@ def ShowBill():#เเสดงบิลเเละทำการคำนว�
 
     Result_Total = 0
     vat = 7/100
+    Result_Vat = 0
 
     print("---- My FOOD ----")
     for i in range(len(Menu_List)):
