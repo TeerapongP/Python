@@ -33,6 +33,5 @@ def priceCalculate():
 login()
 ShowMenu()
 MenuSelect()
-print(vatCalculate(priceCalculate=int(input("ENTER PRICE : "))))
-print(priceCalculate(),"THB")
+
 
