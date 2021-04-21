@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 
 # เเสดงฟีเจอร์ของโปรเเกรม
+
 class Menu_Program:
 
     def Show_Menu(self):
@@ -23,6 +24,7 @@ class Select_Menu(Menu_Program):
 
         self.User_Input = Input_User
 
+        #คำนวณการเเรกเปลี่ยนเหรียญ Bitcoins
         if Input_User == 1:
             def Convert_btc_to_cur():
                 print("-" * 40)
@@ -39,6 +41,7 @@ class Select_Menu(Menu_Program):
 
             Convert_btc_to_cur()
 
+        #เเสดงเหรียญ BTC วันที่เท่าไหร่
         if Input_User == 2:
             def Date_BTC():
                 print("-" * 40)
@@ -67,6 +70,7 @@ class Select_Menu(Menu_Program):
 
             Date_BTC()
 
+        #เลือกการเเลกเปลี่ยนวันก่อนหน้านั้น
         if Input_User == 3:
             def previous_date():
                 print("-" * 60)
