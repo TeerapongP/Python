@@ -3,7 +3,6 @@ import datetime
 import matplotlib.pyplot as plt
 
 
-
 # เเสดงฟีเจอร์ของโปรเเกรม
 class Menu_Program:
 
