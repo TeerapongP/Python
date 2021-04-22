@@ -19,12 +19,13 @@ class Menu_Program:
 # ฟังชั่นเลือก Menu
 class Select_Menu():
 
-    def Menu_Selects(self, Input_User):
+    def Menu_Selects(self, User_Input ):
 
-        self.User_Input = Input_User
+        self.User_Input = User_Input 
 
         #คำนวณการเเรกเปลี่ยนเหรียญ Bitcoins
-        if Input_User == 1:
+        if User_Input  == 1:
+
             def Convert_btc_to_cur():
                 print("-" * 40)
                 print("BITCOINS Converter TO Cerrency PROGRAM")
@@ -41,7 +42,7 @@ class Select_Menu():
             Convert_btc_to_cur()
 
         #เเสดงเหรียญ BTC วันที่เท่าไหร่
-        if Input_User == 2:
+        if User_Input  == 2:
             def Date_BTC():
                 print("-" * 40)
                 print("BTC Chart Change (THB) PROGRAM")
@@ -70,7 +71,7 @@ class Select_Menu():
             Date_BTC()
 
         #เลือกการเเลกเปลี่ยนวันก่อนหน้านั้น
-        if Input_User == 3:
+        if User_Input  == 3:
             def previous_date():
                 print("-" * 60)
                 print("CONVERT BITCOINS TO AMOUNT CURRENCY  PREVIOUS DATE")
