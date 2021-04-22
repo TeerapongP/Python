@@ -17,8 +17,7 @@ class Menu_Program:
 
 
 # ฟังชั่นเลือก Menu
-class Select_Menu(Menu_Program):
-    User_Input = ""
+class Select_Menu():
 
     def Menu_Selects(self, Input_User):
 
