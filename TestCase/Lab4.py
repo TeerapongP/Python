@@ -1,11 +1,12 @@
 import math
 
-time = int(input("Input time parking (miinute) : " ))
+time = int(input("Input time parking (minute) : " )) #ทำการรับค่าเวลาจาก User
 print("-" * 60)
 
-hr = int(time *0.016667) #ทำการคำนวน แปลง นาที เป็น ชั่วโมง
-minutes = math.floor((((time/3600)*60)*10)) 
+hr = int(time / 60)  #ทำการคำนวนเวลาจาก นาที เป็น ชั่วโมง
+minutes = time % 60 #ทำการ mod นาทีจาก user 
 print("\t Time : ",hr,"Hour",minutes,"minutes")
 
 print("-" * 60)
-print("Total price = ",math.ceil((hr*30)+((minutes*50)/100)),"BATH")
+result = (hr*30)+(minutes*50)/100
+print("Total price = ",'%.2f' %result,"Bath")
