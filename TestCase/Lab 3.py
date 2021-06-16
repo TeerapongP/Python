@@ -1,5 +1,5 @@
-name = input()
-age = int(input())
+name = input("Input Name : ")
+age = int(input("Input Christian era : "))
 
 result = 2021 - age
 
