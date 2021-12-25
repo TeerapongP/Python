@@ -3,27 +3,25 @@ class User:
     employee_input =input("Employee #1 Name : ")
     salary_input = int(input("Salary : "))
     choice_input = ''
-    vat_cal=0
-    tax_cal=0
-    total = 0
     total_sum = 0
+    
     def Calculate(self):
-        
+        tax_cal = 0
         if(self.salary_input>=30000):
-
-            self.vat_cal = self.salary_input-(self.salary_input*(3/100))   
-            self.tax_cal = self.salary_input -self.vat_cal
+            vat_cal = self.salary_input-(self.salary_input*(3/100))   
             
         elif(self.salary_input>=15000):    
-            self.vat_cal = self.salary_input-(self.salary_input*(1.5/100))    
-            self.tax_cal = self.salary_input -self.vat_cal
+            vat_cal = self.salary_input-(self.salary_input*(1.5/100)) 
 
-        self.total = self.salary_input - self.tax_cal
-        self.total_sum = self.total_sum + self.salary_input
+        tax_cal = self.salary_input - vat_cal
+        total = self.salary_input - tax_cal
+        self.total_sum = self.total_sum + total
+
+        print("Employee Name :",self.employee_input,"Salary :",self.salary_input,"Bath","Tax :",tax_cal,"Bath","Total :",total,"Bath")
 
     def Loop_choice(self):
         i = 1
-        print("Employee Name :",self.employee_input,"Salary :",self.salary_input,"Bath","Tax :",self.tax_cal,"Bath","Total :",self.total,"Bath")    
+        
         print("Do you have any Employee in this department [Y/N] : ")
         self.choice_input = str(input().upper())
 
@@ -36,7 +34,7 @@ class User:
            
             self.employee_input =input("Employee #"+ str(i+1)+" Name : ")
             self.salary_input = int(input("Salary : "))
-            self.total_sum = self.total_sum + self.salary_input
+            self.Calculate()
 
             print("Do you have any Employee in this department [Y/N] : ")
             self.choice_input = str(input().upper())

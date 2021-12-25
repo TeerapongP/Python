@@ -36,7 +36,7 @@ class Select_Menu():
                 btc = BtcConverter()
                 result_price = btc.convert_btc_to_cur(Input_BitCoins, Input_Cerrency.upper())
 
-                print(result_price,Input_Cerrency.upper())
+                print('${:,.2f}'.format(result_price),Input_Cerrency.upper())
                 print("-" * 40)
 
             Convert_btc_to_cur()
@@ -46,8 +46,8 @@ class Select_Menu():
             def Date_BTC():
                 print("-" * 40)
                 print("BTC Chart Change (THB) PROGRAM")
-                print("โปรแกรมจะแสดงผลตั้งแต่วันที่เลือกไม่เกิน 3 ปี")
-                print("กรุณาเลือกก่อนวันที่ 6 มิถุนายน 2013")
+                print("The program is flexible for a maximum of 3 years.")
+                print("Please select before 6 June 2013.")
                 print("Input start date : (ex. 2013 6 24)")
                 start_date_year = int(input("Input year: "))
                 start_date_month = int(input("Input month: "))
@@ -88,7 +88,7 @@ class Select_Menu():
                 set_date = datetime.datetime(start_date_year, start_date_month, start_date_day)
                 btc_convert = btc.convert_btc_to_cur_on(Input_BitCoins,Input_Cerrency,set_date)
 
-                print("%.5f"%btc_convert,Input_Cerrency.upper())
+                print("${:,.2f}".format(btc_convert),Input_Cerrency.upper())
                 print("-" * 40)
 
             previous_date()
